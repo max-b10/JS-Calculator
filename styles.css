@@ -1,0 +1,153 @@
+/* Initial 'clearing' styles */
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+    font-family: 'Staatliches', cursive;
+
+}
+/* Background Image */
+body{
+    background-image: url('/images/math-background.jpg');
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.calculator-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Display field start */
+.calculator-display{
+    padding: 0 5px 0 0;
+    margin: 2px 4px;
+    border-radius: 2px;
+}
+.operand{
+    margin: 0 0;
+    padding: 0 0;
+    text-align: end;
+}
+#previous-operand{
+    font-size: 12px;
+}
+#current-operand{
+    font-size: 29px;
+}
+/* Display field end */
+
+/* Calculator buttons start */
+.calculator-button{
+    display: inline-block;
+    cursor:pointer;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #98878f;
+    border:none;
+    border-radius: 2px;
+    color: white;
+    outline:none;
+}
+.calculator-button:active {/*on Click*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+    border-bottom: none;/*disappears*/
+}
+.operator{
+    background-color: #494e68;
+    font-size: 22px;
+}
+/* Calculator buttons end */
+
+/* Calculator grid layout, areas and buttons start */
+.calculator-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'display display display display'
+    'sum subtract multiply divide'
+    'seven eight nine equals'
+    'four five six equals'
+    'one two three equals'
+    'zero decimalPoint clear equals';
+    border:2px solid black;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #192231;
+}
+#display{
+    grid-area: display;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px solid black;
+    font-size: 26px;
+    color: black;
+    height:50px;
+    background-color: whitesmoke;
+}
+#sum{
+    grid-area: sum;
+}
+#subtract{
+    grid-area: subtract;
+}
+#multiply{
+    grid-area: multiply;
+    font-size: 18px;
+}
+#divide{
+    grid-area: divide;
+}
+#seven{
+    grid-area: seven;
+}
+#eight{
+    grid-area: eight;
+}
+#nine{
+    grid-area: nine;
+}
+#four{
+    grid-area: four;
+}
+#five{
+    grid-area: five;
+}
+#six{
+    grid-area: six;
+}
+#one{
+    grid-area: one;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#zero{
+    grid-area: zero;
+}
+#decimal-point{
+    grid-area: decimalPoint;
+    background-color: #705f68;
+
+}
+#clear{
+    grid-area: clear;
+    background-color: #985e6d;
+}
+#equals{
+    grid-area: equals;
+    background-color: #67985ed0;
+    font-size: 28px;
+}
+/* Calculator grid layout, areas and buttons end */
