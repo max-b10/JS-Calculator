@@ -1,6 +1,5 @@
 // Calculator
 const calculator = document.querySelector(".calculator");
-
 // Display divs
 let secondaryDisplay = document.querySelector("#secondary-display");
 let primaryDisplay = document.querySelector("#primary-display");
@@ -25,23 +24,39 @@ const sevenButton = document.querySelector("#seven");
 const eightButton = document.querySelector("#eight");
 const nineButton = document.querySelector("#nine");
 
-// Looping through and adding event listeners to all number buttons on the calc.
-const calcNumberButtons = document.querySelectorAll(".number");
-for (let i = 0; i < calcNumberButtons.length; i++) {
-  calcNumberButtons[i].addEventListener("click", (e) => {
-    // Cause the primary display to reflect which number button is clicked.
-    let calcNumberButton = e.target;
-    let calcNumberButtonValue = calcNumberButton.textContent;
-    let primaryDisplayValue = primaryDisplay.textContent;
-    // Prevent '0s' being concatenated if it's the first button clicked.
-    if (primaryDisplayValue === "0") {
-      primaryDisplay.textContent = calcNumberButtonValue;
-    } else {
-      primaryDisplay.textContent += calcNumberButtonValue;
-    }
-  });
-}
 // Clear Button
 clearButton.addEventListener("click", (e) => {
   primaryDisplay.textContent = "";
+  secondaryDisplay.textContent = "";
 });
+
+// Looping through and adding event listeners to all number buttons on the calc.
+const calcButtons = document.querySelectorAll(".calc-button");
+for (let i = 0; i < calcButtons.length; i++) {
+  calcButtons[i].addEventListener("click", (e) => {
+    // Cause the primary display to reflect which  button is clicked.
+    const calcButton = e.target;
+    const calcButtonValue = calcButton.textContent;
+    const primaryDisplayValue = primaryDisplay.textContent;
+    const type = calcButton.dataset.type;
+    // Prevent '0s' being concatenated if it's the first button clicked.
+    // Behaviour if it is a number button:
+    if (type === "number") {
+      if (primaryDisplayValue === "0") {
+        primaryDisplay.textContent = calcButtonValue;
+      } else {
+        primaryDisplay.textContent += calcButtonValue;
+      }
+    }
+    // Behaviour if it is an operator button:
+    if (type === "operator") {
+      secondaryDisplay.textContent = e.target.textContent;
+      // 'dataset' creates a custom attribute. See html for the data-type assignment on the buttons.
+      calculator.dataset.previousKeyType = "operator";
+    }
+  });
+
+  // function calculate(firstNumber, operator, secondNumber){
+  //   firstNumber = parseInt(firstNumber);
+  //   secondNumber = parseInt(secondNumber);
+}
