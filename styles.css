@@ -27,15 +27,15 @@ body{
     margin: 2px 4px;
     border-radius: 2px;
 }
-.operand{
+.display{
     margin: 0 0;
     padding: 0 0;
     text-align: end;
 }
-#previous-operand{
+#secondary-display{
     font-size: 12px;
 }
-#current-operand{
+#primary-display{
     font-size: 29px;
 }
 /* Display field end */
@@ -66,7 +66,7 @@ body{
 /* Calculator buttons end */
 
 /* Calculator grid layout, areas and buttons start */
-.calculator-grid{
+.calculator{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -79,7 +79,7 @@ body{
     'zero decimalPoint clear equals';
     border:2px solid black;
     border-radius: 3px;
-    padding: 2px;
+    padding: 8px;
     background-color: #192231;
 }
 #display{
