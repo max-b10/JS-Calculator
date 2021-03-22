@@ -32,10 +32,8 @@ body{
     padding: 0 0;
     text-align: end;
 }
-#secondary-display{
-    font-size: 12px;
-}
-#primary-display{
+
+#display{
     font-size: 26px;
 }
 /* Display field end */
@@ -82,7 +80,7 @@ body{
     padding: 8px;
     background-color: #192231;
 }
-#display{
+#display-layout{
     grid-area: display;
     display: flex;
     flex-direction: row;
