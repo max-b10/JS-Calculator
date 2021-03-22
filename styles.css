@@ -74,7 +74,7 @@ body{
     'seven eight nine equals'
     'four five six equals'
     'one two three equals'
-    'zero decimalPoint clear equals';
+    'zero square clear equals';
     border:2px solid black;
     border-radius: 3px;
     padding: 8px;
@@ -86,10 +86,11 @@ body{
     flex-direction: row;
     justify-content: flex-end;
     border: 1px solid black;
-    font-size: 26px;
+    font-size: 40px;
     color: black;
     height:50px;
     background-color: whitesmoke;
+    padding: 0 7px 0 0;
 }
 #sum{
     grid-area: sum;
@@ -134,10 +135,10 @@ body{
 #zero{
     grid-area: zero;
 }
-#decimal-point{
-    grid-area: decimalPoint;
+#square{
+    grid-area: square;
     background-color: #705f68;
-
+    font-family:'Dancing Script', cursive;
 }
 #clear{
     grid-area: clear;
