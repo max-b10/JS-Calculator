@@ -15,26 +15,48 @@
     <div class="container">
       <div class="calc-container">
         <div class="calculator">
-          <div class="calc-display" id="display">
-            <div id="display-layout">
-              <div class="display" id="secondary-display"></div>
+          <div id="display-layout">
+            <div class="calc-display" id="display">
+              <!-- <div class="display" id="secondary-display"></div> -->
               <div class="display" id="primary-display"></div>
             </div>
           </div>
-          <button class="calc-button" data-type="operator" id="sum">+</button>
-          <button class="calc-button" data-type="operator" id="substract">
+          <button
+            class="calc-button operator"
+            data-key="sum"
+            data-type="operator"
+            id="sum"
+          >
+            +
+          </button>
+          <button
+            class="calc-button operator"
+            data-key="subtract"
+            data-type="operator"
+            id="substract"
+          >
             -
           </button>
-          <button class="calc-button" data-type="operator" id="multiply">
+          <button
+            class="calc-button operator"
+            data-key="multiply"
+            data-type="operator"
+            id="multiply"
+          >
             x
           </button>
-          <button class="calc-button" data-type="operator" id="divide">
+          <button
+            class="calc-button operator"
+            data-key="divide"
+            data-type="operator"
+            id="divide"
+          >
             ÷
           </button>
           <button class="calc-button" data-type="number" id="seven">7</button>
           <button class="calc-button" data-type="number" id="eight">8</button>
           <button class="calc-button" data-type="number" id="nine">9</button>
-          <button class="calc-button" id="equals">=</button>
+          <button class="calc-button" data-type="equals" id="equals">=</button>
           <button class="calc-button" data-type="number" id="four">4</button>
           <button class="calc-button" data-type="number" id="five">5</button>
           <button class="calc-button" data-type="number" id="six">6</button>
@@ -42,7 +64,11 @@
           <button class="calc-button" data-type="number" id="two">2</button>
           <button class="calc-button" data-type="number" id="three">3</button>
           <button class="calc-button" data-type="number" id="zero">0</button>
-          <button class="calc-button decimal-point" id="decimal-point">
+          <button
+            class="calc-button decimal-point"
+            data-type="number"
+            id="decimal-point"
+          >
             .
           </button>
           <button class="calc-button" id="clear">C</button>
