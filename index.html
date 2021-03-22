@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Bangers&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,10 +20,10 @@
       <div class="calc-container">
         <div class="calculator">
           <div id="display-layout">
-            <div class="calc-display" id="display">
-              <!-- <div class="display" id="secondary-display"></div> -->
-              <div class="display" id="primary-display"></div>
-            </div>
+            <!-- <div class="calc-display" id="display"> -->
+            <!-- <div class="display" id="secondary-display"></div> -->
+            <div class="display" id="primary-display"></div>
+            <!-- </div> -->
           </div>
           <button
             class="calc-button operator"
@@ -65,11 +69,12 @@
           <button class="calc-button" data-type="number" id="three">3</button>
           <button class="calc-button" data-type="number" id="zero">0</button>
           <button
-            class="calc-button decimal-point"
-            data-type="number"
-            id="decimal-point"
+            class="calc-button operator"
+            data-key="square"
+            data-type="operator"
+            id="square"
           >
-            .
+            x²
           </button>
           <button class="calc-button" id="clear">C</button>
         </div>
