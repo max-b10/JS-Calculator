@@ -1,3 +1,6 @@
+// Portfolio button
+const portfolioButton = document.querySelector(".return-button");
+
 // Calculator
 const calculator = document.querySelector(".calculator");
 // Display div
@@ -22,6 +25,12 @@ const sixButton = document.querySelector("#six");
 const sevenButton = document.querySelector("#seven");
 const eightButton = document.querySelector("#eight");
 const nineButton = document.querySelector("#nine");
+
+// Portfolio button redirect:
+
+portfolioButton.addEventListener("click", () => {
+  window.location.replace("https://portfoliomax.netlify.app");
+});
 
 // Looping through and adding event listeners to all number buttons on the calc.
 const calcButtons = document.querySelectorAll(".calc-button");
