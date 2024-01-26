@@ -29,7 +29,7 @@ const nineButton = document.querySelector("#nine");
 // Portfolio button redirect:
 
 portfolioButton.addEventListener("click", () => {
-  window.location.replace("https://portfoliomax.netlify.app");
+  window.location.replace("https://maxbungay.com");
 });
 
 // Looping through and adding event listeners to all number buttons on the calc.
